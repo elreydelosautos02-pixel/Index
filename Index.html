@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agencia Gourmet - Landing Premium</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fefcf8;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff6b35, #ff9a3c);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      transition: transform 0.5s;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background: #fff200;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 1rem;
+      background: url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      color: white;
+      text-shadow: 0 0 15px rgba(0,0,0,0.6);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeIn 1s forwards;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    .btn {
+      background: #fff200;
+      color: #ff6b35;
+      padding: 1rem 2.5rem;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff6b35;
+      color: #fff200;
+      transform: scale(1.05);
+    }
+
+    /* Sections */
+    section {
+      padding: 5rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2rem;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #ff6b35;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .services, .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      flex: 1 1 280px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.5s, box-shadow 0.5s;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Agencia Gourmet</h1>
+    <p>Landing pages que convierten visitantes en clientes</p>
+    <nav>
+      <a href="#services">Servicios</a>
+      <a href="#about">Sobre Nosotros</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Impulsa tu negocio con nuestra landing premium</h2>
+    <p>Landing page optimizada, responsive y lista para captar clientes desde el primer día.</p>
+    <a href="#contact" class="btn">Contáctanos Ahora</a>
+  </section>
+
+  <section id="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Landing Profesional</h3>
+        <p>Diseños modernos, rápidos y optimizados para convertir.</p>
+      </div>
+      <div class="card">
+        <h3>Integración WhatsApp</h3>
+        <p>Comunicación directa con tus clientes desde la landing.</p>
+      </div>
+      <div class="card">
+        <h3>SEO Básico</h3>
+        <p>Landing optimizada para aparecer en Google desde el primer día.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Sobre Nosotros</h2>
+    <p style="text-align:center; max-width:800px; margin:0 auto;">Somos un equipo joven especializado en crear landing pages que realmente generan clientes. Cada proyecto es personalizado y enfocado en resultados.</p>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonios</h2>
+    <div class="testimonials">
+      <div class="card">
+        <p>"Mi negocio creció mucho gracias a la landing de esta agencia."</p>
+        <h4>- Ana P.</h4>
+      </div>
+      <div class="card">
+        <p>"Entrega rápida y diseño increíble, muy recomendados."</p>
+        <h4>- Carlos M.</h4>
+      </div>
+      <div class="card">
+        <p>"Profesionales y atentos, la landing funcionó perfecto para nuestro evento."</p>
+        <h4>- Laura G.</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contáctanos</h2>
+    <p style="text-align:center;">¿Listo para tu landing que convierte? Contáctanos ahora:</p>
+    <div style="text-align:center; margin-top:1rem;">
+      <a href="https://wa.me/1234567890" class="btn">WhatsApp</a>
+      <a href="mailto:contacto@agenciagourmet.com" class="btn">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Agencia Gourmet. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // Animación al hacer scroll
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
